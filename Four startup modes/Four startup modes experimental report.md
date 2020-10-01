@@ -19,6 +19,6 @@ standard模式：在不进行显式指定的情况下，所有活动默认都会
 
 ### 测试结果  
   
-![standard模式下打印的日志](/img/standard.png)  
+![standard模式下打印的日志](img/standard.png)  
 
 从logcat打印信息可以看出，每点击一次按钮就会创建一个新的FirstActivity实例，也就是说，每点击一次按钮，就会往返回栈中添加一个新的实例。退出程序时，添加了几个实例就要点击几次back键
