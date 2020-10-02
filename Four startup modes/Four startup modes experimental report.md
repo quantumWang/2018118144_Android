@@ -134,7 +134,31 @@ onRestart()、onDestroy()方法均被调用，同时我们惊喜地发现，只�
 显而易见，SecondActivity的返回栈id与另外两个活动不同，这说明SecondActivity确实存在一个单独的返回栈中，而且这个栈中只有SecondActivity一个活动  
 
 按下back键进行返回，我们发现ThirdActivity直接返回到了FirstActivity，再按下back键，又返回到SecondActivity，再按下back键才退出程序，这是为什么？  
-这是因为FirstActivity和ThirdActivity是存放在同一个返回栈内，那么当按下back键后，ThirdActivity出栈，此时FirstActivity成为栈顶活动。然后在FirstActivity界面再次按下back键，随着FirstActivity出栈，当前的返回栈已空，于是就显示了另一个返回栈的栈顶活动，即SecondActivity。再次按下back键，所有返回栈空，退出程序。
+这是因为FirstActivity和ThirdActivity是存放在同一个返回栈内，那么当按下back键后，ThirdActivity出栈，此时FirstActivity成为栈顶活动。然后在FirstActivity界面再次按下back键，随着FirstActivity出栈，当前的返回栈已空，于是就显示了另一个返回栈的栈顶活动，即SecondActivity。再次按下back键，所有返回栈空，退出程序。  
+
+## 总结 
+### 四种启动模式对比  
+
+| 启动模式| 返回栈 | 是否创建新实例 |  
+| :--: | :--:| :--: |
+| standard | 系统不会在乎活动是否在返回栈中存在，直接创建新活动 | 是 |  
+| singleTop | 系统检查返回栈顶是否存在该活动，若存在，直接调用 | 不一定 |  
+| singleTask | 只要该活动的实例存在返回栈中，则直接使用该实例并把该活动之上的所有活动出栈 | 不一定 |  
+| singleInstance | 启用一个全新的返回栈来管理该活动，实现共享活动实例 | 否 |  
+
+### 四种模式的应用情景  
+
+| 启动模式 | 应用场景 |
+| :--: | :--: |  
+| standard | 邮件、mainfest中没有配置就默认标准模式 | 
+| singleTop | 登录页面、WXPayEntryActivity、WXEntryActivity 、推送通知栏 |  
+| singleTask | 程序模块逻辑入口:主页面（Fragment的containerActivity）、WebView页面、扫一扫页面、电商中：购物界面，确认订单界面，付款界面 | 
+| singleInstance | 系统Launcher、锁屏键、来电显示等系统应用 | 
+
+
+
+
+
 
 
 
