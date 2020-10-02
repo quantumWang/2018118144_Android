@@ -17,7 +17,7 @@ standard模式：在不进行显式指定的情况下，所有活动默认都会
 `Intent intent=new Intent(FirstActivity.this,FirstActivity.class);//在FirstActivity的基础上启动FirstActivity`  
 `startActivity(intent);`  
 
-### 测试结果  
+#### 测试结果  
   
 ![standard模式下打印的日志](img/standard.png)  
 
@@ -36,7 +36,7 @@ standard模式：在不进行显式指定的情况下，所有活动默认都会
 
 `android:launchMode="singleTop"`  
 
-### 测试结果  
+#### 测试结果  
 运行程序，从logcat打印信息可以看到已经创建了一个FirstActivity实例  
 
 ![singleTop模式下打印的日志](img/singleTop1.png)
@@ -87,6 +87,8 @@ standard模式：在不进行显式指定的情况下，所有活动默认都会
     }
 ```  
 
+#### 测试结果  
+
 运行程序，在FirstActivity界面点击按钮进入SecondActivity后，在SecondActivity界面点击按钮进入FirstActivity，观察logcat打印信息： 
 
 ![singleTask模式下打印的日志](img/singleTask.png)
@@ -121,7 +123,9 @@ onRestart()、onDestroy()方法均被调用，同时我们惊喜地发现，只�
 
 最后修改ThirdActivity中onCreate()方法代码  
 
-`Log.d("ThirdActivity", "Task id is " + getTaskId());`  
+`Log.d("ThirdActivity", "Task id is " + getTaskId());` 
+
+#### 测试结果  
 
 运行程序，在FirstActivity界面点击按钮进入SecondActivity后，在SecondActivity界面点击按钮进入到ThirdActivity，观察打印日志：  
 
