@@ -18,7 +18,8 @@ public class FirstActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.d("FirstActivity",this.toString());//调用toString()方法打印FirstActivity的哈希值，通过观察logcat中打印的哈希值验证是否创建出新的FirstActivity实例
+//        Log.d("FirstActivity", this.toString());//调用toString()方法打印FirstActivity的哈希值，通过观察logcat中打印的哈希值验证是否创建出新的FirstActivity实例
+        Log.d("FirstActivity", "Task id is " + getTaskId());//该方法用于打印出返回栈的id
         setContentView(R.layout.first_layout);
         Button button1 = (Button) findViewById(R.id.button_1);
         button1.setOnClickListener(new View.OnClickListener() {
@@ -42,12 +43,19 @@ public class FirstActivity extends AppCompatActivity {
 //                Intent intent = new Intent(FirstActivity.this, SecondActivity.class);
 //                startActivityForResult(intent, 1);
 
-                Intent intent=new Intent(FirstActivity.this,FirstActivity.class);//在FirstActivity的基础上启动FirstActivity
+//                Intent intent=new Intent(FirstActivity.this,FirstActivity.class);//在FirstActivity的基础上启动FirstActivity
+                Intent intent = new Intent(FirstActivity.this, SecondActivity.class);//在FirstActivity的基础上启动SecondActivity
                 startActivity(intent);
 
 
             }
         });
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.d("FirstActivity", "onRestart");
     }
 
     @Override
