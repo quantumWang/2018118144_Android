@@ -32,7 +32,7 @@
 
 运行程序，效果如图   
 
-![TextView运行效果](./TextView01.png)  
+![TextView运行效果](img/TextView01.png)  
 
 **注：TextView的文字默认居左上角对齐**  
 
@@ -43,7 +43,7 @@
 ```  
 重新运行程序，效果如图  
 
-![Alt text](./TextView02.png)  
+![Alt text](img/TextView02.png)  
 
 几个注意的点：
  + android:gravity用于指定文字的对齐方式，可选值有top、bottom、left、right、center等，可以用 | 来同时指定多个值 
@@ -56,7 +56,7 @@
 ```  
 重新运行程序，效果如图  
 
-![Alt text](./TextView03.png)
+![Alt text](img/TextView03.png)
 
 总结：  
 
