@@ -47,7 +47,7 @@
 
 几个注意的点：
  + android:gravity用于指定文字的对齐方式，可选值有top、bottom、left、right、center等，可以用 | 来同时指定多个值 
- + 设置文字对齐方式的属性是 android:gravity，而不是**android:layout_gravity（坑） **
+ + 设置文字对齐方式的属性是 android:gravity，而不是**android:layout_gravity（坑)**
 
 还可以对TextView中文字的大小和颜色进行修改 ，添加代码  
 ```
