@@ -92,7 +92,7 @@ button是安卓开发中使用频繁的一个组件，用于触发事件，与�
 
 运行程序，效果如下图  
 
-![Alt text](./Button01.png)  
+![Alt text](img/Button01.png)  
 
 接下来用匿名类的方式在MainActivity为Button的点击事件注册一个监听器 ，通过点击Button弹出对话框，实现对杨圣云老师问好
 
@@ -117,7 +117,7 @@ protected void onCreate(Bundle savedInstanceState) {
 ```
 运行程序，效果如图：    
   
-![Alt text](./Button02.png)  
+![Alt text](img/Button02.png)  
 
 ## EditText  
 
@@ -149,9 +149,9 @@ android:id、android:layout_width、android:layout_height我们已经很熟悉�
 
 运行程序，效果如下图  
 
-![Alt text](./EditText01.png)
+![Alt text](img/EditText01.png)
 
-![Alt text](./EditText02.png)
+![Alt text](img/EditText02.png)
 
 **可以看到，未输入时EditText中显示了一段提示性文本，输入后，无论输入多少行内容，只显示最大行数的内容（此时设置为两行），相应文本向上滚动。**  
 
@@ -175,7 +175,7 @@ switch (view.getId()) {
 
 重新运行程序，在EditText中输入一段内容，然后点击按钮，效果如下图：  
 
-![Alt text](./EditText03.png)
+![Alt text](img/EditText03.png)
 
 ## ImageView  
 ImageView是用于在界面上展示图片的一个控件。接下来通过实例代码演示该控件的用法  
@@ -195,7 +195,7 @@ ImageView是用于在界面上展示图片的一个控件。接下来通过实�
 
 运行程序，效果如下图：  
 
-![Alt text](./ImageView1.png)
+![Alt text](img/ImageView1.png)
 
 通过代码动态修改ImageView中的图片，只需在MainActivity中修改如下代码：
 
@@ -208,7 +208,7 @@ imageView.setImageResource(R.drawable.img_2);
 ```
 重新运行程序，然后点击一下按钮，发现ImageView中显示图片改变了，效果如图：  
 
-![Alt text](./ImageView2.png)
+![Alt text](img/ImageView2.png)
 
 ## ProgressBar  
 
