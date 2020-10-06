@@ -32,7 +32,7 @@
 
 运行程序，效果如图   
 
-![TextView运行效果](img/TextView01.png)  
+![TextView运行效果](./TextView01.png)  
 
 **注：TextView的文字默认居左上角对齐**  
 
@@ -43,11 +43,11 @@
 ```  
 重新运行程序，效果如图  
 
-![Alt text](img/TextView02.png)  
+![Alt text](./TextView02.png)  
 
 几个注意的点：
  + android:gravity用于指定文字的对齐方式，可选值有top、bottom、left、right、center等，可以用 | 来同时指定多个值 
- + 设置文字对齐方式的属性是 android:gravity，而不是**android:layout_gravity（坑)**
+ + 设置文字对齐方式的属性是 android:gravity，而不是**android:layout_gravity（坑） **
 
 还可以对TextView中文字的大小和颜色进行修改 ，添加代码  
 ```
@@ -56,7 +56,7 @@
 ```  
 重新运行程序，效果如图  
 
-![Alt text](img/TextView03.png)
+![Alt text](./TextView03.png)
 
 总结：  
 
@@ -212,7 +212,104 @@ imageView.setImageResource(R.drawable.img_2);
 
 ## ProgressBar  
 
+ProgressBar用于在界面上显示一个进度条，表示程序正在加载一些数据。接下来演示点击按钮，控件的进度加上％10作为更新后的进度  
 
+首先在activity_main.xml中添加一个进度条控件  
+
+```
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100" />
+```  
+
+注释：
++ style属性可以指定进度条的风格，这里设置成水平进度条  
++ android:max属性用于给进度条设置一个最大值，可在代码中动态地修改进度条的进度
+
+设置控件的可见属性，通过android:visibility进行指定，可选值如下：
++  visible 表示控件是可见的，这个是默认值，不指定属性是仍然是可见的  
++  invisible 表示控件不可见，但仍然占据着原来的位置和大小，可以理解成透明态的控件  
++  gone 表示控件不仅不可见，而且不再占据任何屏幕空间  
+
+修改MainActivity中的代码，如下所示：  
+
+```
+ final ProgressBar progressBar = (ProgressBar) findViewById((R.id.progress_bar));
+```  
+
+```
+public void onClick(View view) {
+                switch (view.getId()) {
+                    case R.id.button:
+                        int progress = progressBar.getProgress();
+                        progress = progress + 10;
+                        progressBar.setProgress(progress);
+                        break;
+                    default:
+                        break;
+                }
+
+            }
+```  
+
+运行程序，每点击一次按钮，我们就获取进度条当前的进度，点击六次按钮后，效果如下：  
+
+![Alt text](./ProgressBar1.png)
+
+## AlertDialog  
+
+AlertDialog用于在当前界面中弹出一个对话框，该对话框置顶于所有界面元素之上，能屏蔽掉其他控件的交互能力，一般用于提示一些重要内容或警告信息  
+
+接下来通过代码演示AlertDialog的用法  
+
+```
+  AlertDialog.Builder dialog = new AlertDialog.Builder(MainActivity.this);//通过AlertDialog.Builder创建一个AlertDialog实例
+                    dialog.setTitle("It is my Dialog");//设置对话框标题
+                    dialog.setMessage("Prompt an important message.");//设置内容
+                    dialog.setCancelable(false);//设置可否用Back键关闭对话框
+                    dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                        }
+                    });
+                    dialog.show();//显示对话框 
+```
+重新运行程序，点击按钮后，效果如图：
+
+![Alt text](./AlertDialog.png)
+
+## ProgressDialog  
+
+ProgressDialog 和AlertDialog类似，都可以在界面上弹出一个对话框，都能屏蔽掉其他控件的交互能力。不同的是，ProgressDialog 能在对话框中显示一个进度条，一般用于提示用户等待当前比较耗时的操作。  
+
+修改MainActivity中代码如下：  
+
+```
+ProgressDialog progressDialog = new ProgressDialog(MainActivity.this);
+progressDialog.setTitle("It's progressDialog");
+progressDialog.setMessage("Loading...");
+progressDialog.setCancelable(true);
+progressDialog.show();
+```  
+重新运行程序，点击按钮后效果如下：  
+
+![Alt text](./ProgressDialog.png)
+
+**注意：setCancelable()方法中传入true，表示ProgressDialog能够通过back键取消。若设置成false，则要注意在代码中做好控制，当数据加载完成时必须调用dismiss()方法关闭对话框，否则ProgressDialog将会一直存在。**  
+
+## 四种基本布局  
+
+
+
+  
+
+
+
+
+ 
 
 
 
