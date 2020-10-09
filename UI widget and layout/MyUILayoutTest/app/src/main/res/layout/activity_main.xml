@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.percentlayout.widget.PercentFrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/text_view"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_gravity="left"-->
+    <!--        android:text="It's TextView" />-->
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/image_view"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_gravity="right"-->
+    <!--        android:src="@mipmap/ic_launcher" />-->
+
+    <!--    android:orientation="horizontal">
+        android:orientation="vertical"
+        -->
+
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_gravity="left|top"
+        android:text="Button one"
+        app:layout_heightPercent="50%"
+        app:layout_widthPercent="50%" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_gravity="right|top"
+        android:text="Button two"
+        app:layout_heightPercent="50%"
+        app:layout_widthPercent="50%" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_gravity="left|bottom"
+        android:text="Button three"
+        app:layout_heightPercent="50%"
+        app:layout_widthPercent="50%" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_gravity="right|bottom"
+        android:text="Button four"
+        app:layout_heightPercent="50%"
+        app:layout_widthPercent="50%" />
+
+    <!--    <Button-->
+    <!--        android:id="@+id/button5"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_below="@+id/button3"-->
+    <!--        android:layout_toRightOf="@id/button3"-->
+    <!--        android:text="Button five" />-->
+
+    <!--    <EditText-->
+    <!--        android:id="@+id/input_message"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_weight="1"-->
+    <!--        android:hint="Input something this" />-->
+
+    <!--    <Button-->
+    <!--        android:id="@+id/send"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="SEND" />-->
+
+</androidx.percentlayout.widget.PercentFrameLayout>
