@@ -32,7 +32,7 @@
 
 运行程序，效果如图   
 
-![TextView运行效果](./TextView01.png)  
+![TextView运行效果](img/TextView01.png)  
 
 **注：TextView的文字默认居左上角对齐**  
 
@@ -43,7 +43,7 @@
 ```  
 重新运行程序，效果如图  
 
-![Alt text](./TextView02.png)  
+![Alt text](img/TextView02.png)  
 
 几个注意的点：
  + android:gravity用于指定文字的对齐方式，可选值有top、bottom、left、right、center等，可以用 | 来同时指定多个值 
@@ -56,7 +56,7 @@
 ```  
 重新运行程序，效果如图  
 
-![Alt text](./TextView03.png)
+![Alt text](img/TextView03.png)
 
 总结：  
 
@@ -257,7 +257,7 @@ public void onClick(View view) {
 
 运行程序，每点击一次按钮，我们就获取进度条当前的进度，点击六次按钮后，效果如下：  
 
-![Alt text](./ProgressBar1.png)
+![Alt text](img/ProgressBar1.png)
 
 ## AlertDialog  
 
@@ -279,7 +279,7 @@ AlertDialog用于在当前界面中弹出一个对话框，该对话框置顶于
 ```
 重新运行程序，点击按钮后，效果如图：
 
-![Alt text](./AlertDialog.png)
+![Alt text](img/AlertDialog.png)
 
 ## ProgressDialog  
 
@@ -296,7 +296,7 @@ progressDialog.show();
 ```  
 重新运行程序，点击按钮后效果如下：  
 
-![Alt text](./ProgressDialog.png)
+![Alt text](img/ProgressDialog.png)
 
 **注意：setCancelable()方法中传入true，表示ProgressDialog能够通过back键取消。若设置成false，则要注意在代码中做好控制，当数据加载完成时必须调用dismiss()方法关闭对话框，否则ProgressDialog将会一直存在。**  
 
