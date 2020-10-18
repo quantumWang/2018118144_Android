@@ -8,7 +8,8 @@
 ```
  implementation 'androidx.recyclerview:recyclerview:1.0.0'
 ```  
-添加完该行依赖后，点击右上角**Sync Now**进行同步。
+添加完该行依赖后，点击右上角**Sync Now**进行同步。  
+
 3. 修改activity_main.xml中的代码如下：  
 
 ```
@@ -161,13 +162,13 @@ public class MainActivity extends AppCompatActivity {
 ```  
 
 运行程序，效果如下图所示：
-![Alt text](.img/recyclerview1.png)  
+![Alt text](img/recyclerview1.png)  
 
-![Alt text](.img/recyclerview2.png)  
+![Alt text](img/recyclerview2.png)  
 
-![Alt text](.img/recyclerview3.png)  
+![Alt text](img/recyclerview3.png)  
 
-![Alt text](.img/recyclerview4.png)
+![Alt text](img/recyclerview4.png)
 
 
 
