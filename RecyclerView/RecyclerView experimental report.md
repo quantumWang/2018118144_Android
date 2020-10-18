@@ -161,7 +161,8 @@ public class MainActivity extends AppCompatActivity {
 }
 ```  
 
-运行程序，效果如下图所示：
+运行程序，效果如下图所示：  
+
 ![Alt text](img/recyclerview1.png)  
 
 ![Alt text](img/recyclerview2.png)  
