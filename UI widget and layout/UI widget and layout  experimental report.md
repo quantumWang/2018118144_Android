@@ -1,5 +1,4 @@
 # 常用UI控件的使用及基本布局  
-[TOC]
 ## TextView  
 功能：主要用于在界面上显示一段文本信息  
 
@@ -92,7 +91,7 @@ button是安卓开发中使用频繁的一个组件，用于触发事件，与�
 
 运行程序，效果如下图  
 
-![Alt text](./Button01.png)  
+![Alt text](img/Button01.png)  
 
 接下来用匿名类的方式在MainActivity为Button的点击事件注册一个监听器 ，通过点击Button弹出对话框，实现对杨圣云老师问好
 
@@ -117,7 +116,7 @@ protected void onCreate(Bundle savedInstanceState) {
 ```
 运行程序，效果如图：    
   
-![Alt text](./Button02.png)  
+![Alt text](img/Button02.png)  
 
 ## EditText  
 
@@ -149,9 +148,9 @@ android:id、android:layout_width、android:layout_height我们已经很熟悉�
 
 运行程序，效果如下图  
 
-![Alt text](./EditText01.png)
+![Alt text](img/EditText01.png)
 
-![Alt text](./EditText02.png)
+![Alt text](img/EditText02.png)
 
 **可以看到，未输入时EditText中显示了一段提示性文本，输入后，无论输入多少行内容，只显示最大行数的内容（此时设置为两行），相应文本向上滚动。**  
 
@@ -175,7 +174,7 @@ switch (view.getId()) {
 
 重新运行程序，在EditText中输入一段内容，然后点击按钮，效果如下图：  
 
-![Alt text](./EditText03.png)
+![Alt text](img/EditText03.png)
 
 ## ImageView  
 ImageView是用于在界面上展示图片的一个控件。接下来通过实例代码演示该控件的用法  
@@ -195,7 +194,7 @@ ImageView是用于在界面上展示图片的一个控件。接下来通过实�
 
 运行程序，效果如下图：  
 
-![Alt text](./ImageView1.png)
+![Alt text](img/ImageView1.png)
 
 通过代码动态修改ImageView中的图片，只需在MainActivity中修改如下代码：
 
@@ -208,7 +207,7 @@ imageView.setImageResource(R.drawable.img_2);
 ```
 重新运行程序，然后点击一下按钮，发现ImageView中显示图片改变了，效果如图：  
 
-![Alt text](./ImageView2.png)
+![Alt text](img/ImageView2.png)
 
 ## ProgressBar  
 
@@ -344,7 +343,7 @@ android:orientation属性用于指定控件排列方式，可选值如下：
 
 运行程序，可以看到在LinearLayout中添加的三个按钮垂直排列，效果如下：
 
-![Alt text](./linearlayout01.png)
+![Alt text](img/linearlayout01.png)
 
 修改LinearLayout的排列方向如下：  
 
@@ -353,7 +352,7 @@ android:orientation="horizontal"
 ```  
 重新运行程序，可以看到LinearLayout中控件的布局变为水平方向，效果如图：  
 
-![Alt text](./linearlayout02.png)  
+![Alt text](img/linearlayout02.png)  
 
 **注：当LinearLayout的控件布局设置为horizontal时，内部控件的宽度不能设置为match_parent，否则单独的一个控件就会将水平方向占满，导致其它控件没有可放置的位置。同理，排列方向为vertical时，不能将高度设置成match_parent**  
 
@@ -372,7 +371,7 @@ android:layout_gravity="bottom"
 ```
 重新运行程序，效果如图：  
 
-![Alt text](./layout_gravity.png)
+![Alt text](img/layout_gravity.png)
 
 **android:layout_gravity属性值总结：**  
 
@@ -409,7 +408,7 @@ android:layout_weight属性允许开发者使用比例的方式指定控件的�
 ```  
 重新运行程序，效果如下：  
 
-![Alt text](./layout_weight.png)
+![Alt text](img/layout_weight.png)
 
 注：
 + 由于使用了android:layout_weight属性，此时控件的宽度将不再由android:layout_width决定，因此将EditText的宽度设置成0dp是一种较为规范的写法。
@@ -478,7 +477,7 @@ android:layout_alignParentTop="true"
 **这两句代码让Button one和父布局的左上角对齐，其它按钮以此类推**  
 
 重新运行程序，效果如图：  
-![Alt text](./relativelayout01.png)
+![Alt text](img/relativelayout01.png)
 
 上面例子中的每个控件都是相对于父布局进行定位的，下面演示不相对于控件进行定位的情况，修改activity_main.xml中的代码如下：  
 
@@ -534,7 +533,7 @@ android:layout_alignParentTop="true"
 
 重新运行程序，效果如图：  
 
-![Alt text](./relativelayout02.png)
+![Alt text](img/relativelayout02.png)
 
 ###  帧布局  
 
@@ -563,7 +562,7 @@ FrameLayout称作帧布局，这种布局没有方便的定位方式，所有的
 ```  
 重新运行程序，效果如下：  
 
-![Alt text](./framelayout01.png)
+![Alt text](img/framelayout01.png)
 
 **注：帧布局所有的控件默认摆放在布局的左上角，由于ImageView是在TextView之后添加的，所以图片会覆盖在文字上面。**  
 
@@ -587,7 +586,7 @@ FrameLayout称作帧布局，这种布局没有方便的定位方式，所有的
 
 指定TextView在FrameLayout中居左对齐，ImageView在FrameLayout中居右对齐，重新运行程序，效果如下：  
 
-![Alt text](./framelayout02.png)
+![Alt text](img/framelayout02.png)
 
 ### 百分比布局  
 
@@ -642,7 +641,7 @@ implementation 'androidx.percentlayout:percentlayout:1.0.0'
 
 重新运行程序，可以看到每个按钮的宽和高都占据了布局的50%，4个按钮实现平分屏幕，效果如图：  
 
-![Alt text](./percentlayout.png)
+![Alt text](img/percentlayout.png)
 
 
 
