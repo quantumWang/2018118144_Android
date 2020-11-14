@@ -80,11 +80,11 @@ public class MainActivity extends AppCompatActivity {
 ```
 3. 运行程序，按下Home键→Settings→Data usage。关闭Cellular data会弹出无网络可用的提示，如图： 
 
-![Alt text](./broadcast1.png)  
+![Alt text](img/broadcast1.png)  
 
 重新打开Cellular data会弹出网络可用的提示，如图：  
 
-![Alt text](./broadcast2.png)  
+![Alt text](img/broadcast2.png)  
 
 #### 静态注册  
 通过静态注册让程序接收一条开机广播  
@@ -117,16 +117,76 @@ public class BootCompleteReceiver extends BroadcastReceiver {
     </intent-filter>
 </receiver>
 ```  
-4. 
 
-
+4. 将模拟器关闭后重新启动，在启动完成之后就会收到开机广播。
 
 #### 总结  
 动态注册和静态注册的区别：
 
 + 动态注册的广播接收器可以自由的控制注册和取消，有很大的灵活性。但是只能在程序启动之后才能收到广播。注册的逻辑是在onDestroy()方法中的，所以广播接收器的生命周期是和当前活动的生命周期一样。
 
-+ 静态注册的广播不受程序是否启动的约束，当应用程序关闭之后，还是可以接收到广播。
++ 静态注册的广播不受程序是否启动的约束，当应用程序关闭之后，还是可以接收到广播。  
+
+## 发送自定义广播  
+
+### 标准广播  
+1. 定义一个广播接收器接收你将要发送的广播，新建MyBroadcastReceiver类，代码如下：  
+
+```
+public class MyBroadcastReceiver extends BroadcastReceiver {
+    @Override
+    public void onReceive(Context context, Intent intent) {
+        //MyBroadcastReceiver收到自定义广播时，弹出"received in MyBroadcastReceiver"提示
+        Toast.makeText(context, "received in MyBroadcastReceiver", Toast.LENGTH_SHORT).show();
+    }
+}
+```  
+2. 在AndroidManifest中对广播接收器进行修改  
+
+```
+<receiver
+            android:name=".MyBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.example.broadcasttest.MY_BROADCAST" />
+            </intent-filter>
+        </receiver>
+```  
+
+3. 定义一个按钮，作为发送广播的触发点，activity_main.xml中添加如下代码：  
+
+```
+<Button
+    android:id="@+id/button"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Send Broadcast"></Button>
+```  
+
+4. 在按钮的点击事件里面加入发送自定义广播的逻辑，修改MainActivity中的代码：  
+
+```
+Button button = (Button) findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent("com.example.broadcasttest.MY_BROADCAST");
+                sendBroadcast(intent);
+            }
+        });
+```  
+5. 运行程序，点击Send Broadcast按钮，效果如下：
+
+![Alt text](img/broadcast3.png)  
+
+### 有序广播  
+
+
+
+
+
+
 
 
 
