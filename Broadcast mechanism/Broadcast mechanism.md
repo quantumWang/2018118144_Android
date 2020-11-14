@@ -80,11 +80,11 @@ public class MainActivity extends AppCompatActivity {
 ```
 3. 运行程序，按下Home键→Settings→Data usage。关闭Cellular data会弹出无网络可用的提示，如图： 
 
-![Alt text](./broadcast1.png)  
+![Alt text](img/broadcast1.png)  
 
 重新打开Cellular data会弹出网络可用的提示，如图：  
 
-![Alt text](./broadcast2.png)  
+![Alt text](img/broadcast2.png)  
 
 #### 静态注册  
 通过静态注册让程序接收一条开机广播  
