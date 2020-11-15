@@ -1,5 +1,8 @@
 # Android广播机制  
 
+@(安卓)
+
+
 ## 广播机制简介  
 
 ### 分类  
@@ -181,6 +184,46 @@ Button button = (Button) findViewById(R.id.button);
 ![Alt text](img/broadcast3.png)  
 
 ### 有序广播  
+
+广播可以跨进程进行通信，下面验证一个应用接收其他应用程序内发送的广播。  
+
+1. 新建MyBroadCastTest2项目，在该项目下定义一个广播接收器AnotherBroadcastReceiver,代码如下：  
+
+```
+public class AnotherBroadcastReceiver extends BroadcastReceiver {
+
+    @Override
+    public void onReceive(Context context, Intent intent) {
+        Toast.makeText(context, "received in AnotherBroadcastReceiver", Toast.LENGTH_SHORT).show();
+    }
+}
+```  
+2. 在AndroidManifest.xml中对这个广播接收器进行修改：  
+
+```
+<receiver
+    android:name=".AnotherBroadcastReceiver"
+    android:enabled="true"
+    android:exported="true">
+    <intent-filter android:priority="100">
+        <action android:name="com.example.mybroadcasttest.MY_BROADCAST" />
+    </intent-filter>
+</receiver>
+```  
+
+3. 运行MyBroadCastTest2项目到虚拟机后，后台切换到MyBroadCastTest项目的主界面，点击Send Broadcast按钮，分别弹出两次信息如图：  
+![Alt text](img/broadcast4.png)  
+
+![Alt text](img/broadcast5.png)  
+
+总结：应用程序发出的广播是可以被其他应用程序接收到的。  
+
+#### 尝试发送有序广播  
+
+1. 在MainActivity中将`sendBroadcast()`方法改成 `sendOrderedBroadcast()`。  
+2. 设定广播接收器的先后顺序，在AndroidManifest.xml中， 通过对`<intent-filter>`标签的 `android:priority`属性设置优先级。  
+3. 选择是否允许广播继续传递，在`onReceive()`中调用`abortBroadcast()`方法，表示将这条广播截断，后面的广播接收器无法在收到这条广播。
+
 
 
 
