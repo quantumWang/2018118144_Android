@@ -55,37 +55,37 @@ Activity 类中定义了七个回调方法，覆盖了活动生命周期的每�
 
 此时logcat中打印出日志信息：  
 
-![启动程序打印日志信息1](/img/b.png)  
+![启动程序打印日志信息1](img/b.png)  
 
-![启动程序打印日志信息2](/img/c.png)  
+![启动程序打印日志信息2](img/c.png)  
   
 MainActivity 第一次被创建时会依次执行 onCreate()、onStart()和 onResume()方法。点击START NORMAL ACTIVITY按钮，启动 NormalActivity 
  
-![NormalActivity界面](/img/d1.png)  
+![NormalActivity界面](img/d1.png)  
 
 此时logcat打印日志信息： 
  
-![打开NormalActivity时打印日志](/img/e.png)
+![打开NormalActivity时打印日志](img/e.png)
 
 按下 Back 键返回 MainActivity后，日志信息：
  
-![返回MainActivity时打印日志](/img/f.png)  
+![返回MainActivity时打印日志](img/f.png)  
 
 点击START DIALOG ACTIVITY按钮，启动 DialogActivity
 
-![DialogActivity界面](/img/g1.png) 
+![DialogActivity界面](img/g1.png) 
 
 打印日志信息：
 
-![打开DialogActivity时打印日志](/img/h.png)
+![打开DialogActivity时打印日志](img/h.png)
 
 DialogActivity 并没有完全遮挡住 MainActivity，此时 MainActivity 只是进入了暂停状态，并没有进入停止状态。相应地，按下Back 键返回 MainActivity 也应该只有onResume()方法会得到执行。返回 MainActivity打印日志：  
 
-![再次返回MainActivity时打印日志](/img/i.png)  、
+![再次返回MainActivity时打印日志](img/i.png)  、
 
 按下back退出程序，打印信息：  
 
-![退出程序打印日志](/img/j.png)
+![退出程序打印日志](img/j.png)
 
 
 
