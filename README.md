@@ -12,4 +12,6 @@
 ## 第六次实验：强大的滚动控件——RecyclerView  
 [实验六](https://github.com/quantumWang/2018118144_Android/tree/master/RecyclerView)  
 ## 第七次实验：Android广播机制 
-[实验七](https://github.com/quantumWang/2018118144_Android/tree/master/Broadcast%20mechanism)
+[实验七](https://github.com/quantumWang/2018118144_Android/tree/master/Broadcast%20mechanism)  
+## 第八次实验：Android多线程编程与消息处理机制  
+[实验八](https://github.com/quantumWang/2018118144_Android/tree/master/Multithreading%20and%20Message%20processing%20mechanism)
