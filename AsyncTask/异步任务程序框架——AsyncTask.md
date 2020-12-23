@@ -188,11 +188,11 @@ public class MainActivity extends AppCompatActivity {
 ```  
 
 ### 运行结果  
-1. 点击按钮执行线程任务并显示进度
-![Alt text](./AsyncTask1.png)  
+1. 点击按钮执行线程任务并显示进度  
+![Alt text](img/AsyncTask1.png)  
 
-2. 点击**CANCEL**按钮，取消加载
-![Alt text](./AsyncTask2.png)  
+2. 点击**CANCEL**按钮，取消加载  
+![Alt text](img/AsyncTask2.png)  
 
 
 
