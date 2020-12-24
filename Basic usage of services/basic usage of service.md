@@ -5,7 +5,7 @@
 ### 步骤  
 新建一个项目，命名为`MyServiceTest`。依次点击`com.example.myservicetest→New→Service→Service`，`AndroidStudio`弹出窗口如下：  
 
-![Alt text](./service1.png)  
+![Alt text](img/service1.png)  
 
 ### 服务的两个属性  
 |  属性  | 说明  |
@@ -30,7 +30,8 @@ public class MyService extends Service {
 }
 ```  
 
-+ Service中的方法    
++ Service中的方法  
+
 |  方法   | 调用时间  | 说明 |
 |  ----  | ----  | ---- | 
 | `onCreate()`  | 在服务第一次创建时调用 | 无 |
@@ -122,13 +123,13 @@ public void onDestroy() {
 
 5. 测试程序  
 主界面：  
-![Alt text](./service2.png)  
+![Alt text](img/service2.png)  
 
 点击**START SERVICE**按钮，启动服务时的打印日志：  
-![Alt text](./service3.png)  
+![Alt text](img/service3.png)  
 
 点击**STOP SERVICE**按钮，停止服务时的打印日志：  
-![Alt text](./service4.png)  
+![Alt text](img/service4.png)  
 
 ## 活动和服务之间进行通信  
 
@@ -214,11 +215,11 @@ case R.id.unbind_service:
 ```  
 5. 重新运行程序
 + 主界面  
-![Alt text](./service5.png)
+![Alt text](img/service5.png)
 
 + 点击Bind Service按钮，打印日志如下：  
 
-![Alt text](./service6.png)  
+![Alt text](img/service6.png)  
 
 
 
