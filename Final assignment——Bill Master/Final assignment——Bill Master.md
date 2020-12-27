@@ -24,12 +24,12 @@
 
 + 查看全部账单，长按可删除账单    
 ![Alt text](img/project07.png)  
-&nbsp  
+  
 ![Alt text](img/project17.jpg)
 
 + 根据账单类型查询账单  
 ![Alt text](img/project08.jpg)  
-&nbsp
+
 ![Alt text](img/project09.jpg)  
 
 + 用户设置界面  
@@ -37,12 +37,12 @@
 
 + 自由编辑收支类型  
 ![Alt text](img/project11.jpg)  
-&nbsp  
+ 
 ![Alt text](img/project12.jpg)  
 
 + 清空收支账单  
 ![Alt text](img/project14.jpg)  
-&nbsp  
+ 
 ![Alt text](img/project15.jpg)  
 
 + 退出  
